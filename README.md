@@ -31,7 +31,7 @@ share/text-share/
 
 ## 使用方法
 
-1. **访问页面**: 打开 `share/text-share/index.php`
+1. **访问页面**: 打开 `arctan.top/share/text-share/`可直接使用，也可以自己部署。
 
 2. **创建/加入房间**:
 
