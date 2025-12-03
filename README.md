@@ -22,8 +22,12 @@
 
 ## 文件结构
 
-share/text-share/ ├── index.php # 主页面 (包含前端HTML和JS引用) ├── style.css # 样式文件 ├── script.js # 前端JavaScript逻辑 (实现持久化和自动重连逻辑) ├── api.php # 后端API接口 (PHP环境运行，包含System Keeper逻辑) └── README.md # 说明文档
-
+share/text-share/
+├── index.php       # 主页面 (包含前端HTML和JS引用)
+├── style.css       # 样式文件
+├── script.js       # 前端JavaScript逻辑 (实现持久化和自动重连逻辑)
+├── api.php         # 后端API接口 (PHP环境运行，包含System Keeper逻辑)
+└── README.md       # 说明文档
 
 ## 使用方法
 
