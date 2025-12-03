@@ -1,0 +1,365 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 房间号输入界面 */
+.room-input-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    margin: 50px auto;
+    max-width: 500px;
+    border: 1px solid #e1e5e9;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.header p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.room-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+}
+
+.input-group input {
+    padding: 15px;
+    border: 2px solid #e1e5e9;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.divider {
+    position: relative;
+    text-align: center;
+    color: #999;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e1e5e9;
+}
+
+.divider span {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0 20px;
+}
+
+/* 按钮样式 */
+.btn-primary, .btn-secondary, .btn-danger, .btn-tool {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary {
+    background: #f8f9fa;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+}
+
+.btn-secondary:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.btn-tool {
+    background: #6c757d;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.btn-tool:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+/* 文本编辑界面 */
+.text-editor-section {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px auto;
+    border: 1px solid #e1e5e9;
+}
+
+.editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e1e5e9;
+}
+
+.room-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.room-code-display {
+    font-weight: 600;
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+.connection-status {
+    font-size: 0.9rem;
+    color: #28a745;
+}
+
+.connection-status.disconnected {
+    color: #dc3545;
+}
+
+.device-count {
+    font-weight: 600;
+    color: #666;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.toolbar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#shared-text {
+    width: 100%;
+    min-height: 400px;
+    padding: 20px;
+    border: 2px solid #e1e5e9;
+    border-radius: 15px;
+    font-size: 1rem;
+    line-height: 1.6;
+    resize: vertical;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    transition: border-color 0.3s ease;
+}
+
+#shared-text:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.text-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 设备列表 */
+.device-list {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e1e5e9;
+}
+
+.device-list h3 {
+    margin-bottom: 15px;
+    color: #2563eb;
+}
+
+.device-list-items {
+    list-style: none;
+}
+
+.device-list-items li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #2563eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.device-status {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #28a745;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* 通知样式 */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: #28a745;
+}
+
+.notification.error {
+    background: #dc3545;
+}
+
+.notification.info {
+    background: #17a2b8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .room-input-section {
+        margin: 20px auto;
+        padding: 30px 20px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .editor-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .toolbar {
+        justify-content: center;
+    }
+    
+    .text-info {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+}
+
+/* 加载动画 */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
